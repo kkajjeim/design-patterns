@@ -39,6 +39,8 @@ class WeatherData implements Subject {
 
   // *** SUBJECT
   removeObserver(o: Observer) {
+    // 고유한 id가 있는 경우 그를 조회하는 것이 Best Practice
+    // filter 사용 가능
     const index = this.observers.indexOf(o);
     if (this.observers.indexOf(o)) {
       this.observers.splice(index, 1);
